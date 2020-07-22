@@ -1,0 +1,31 @@
+---
+title: "HW03"
+author: "Nicholas Elliott"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## NPC Counts
+
+I've included the counting data for differentiated neural progenitor cells. There 
+are thre lines here: WT, K755R, and R1159Q. K755R and R1159Q have mutant Brm (a 
+member of the BAF chromatin remodeling complex). I've attempted to recreate a figure 
+from Gao et al. 2019 where we were examining the neurogenicity of cells with these Brm mutations. Nestin, Pax6 and Sox2 are key markers for neural progenitors. In this figure we show that mutants had significantly reduced expression for these critical markers, and thus, lost their neurogenicity. This is a dynamite plot (I know, yuck); after I recreate it I'll try to improve on it.
+
+```{r}
+library(readxl)
+read_excel("C:\\Users\\nelli\\Desktop\\NPC Counts for Paper.xlsx", sheet = 3)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
